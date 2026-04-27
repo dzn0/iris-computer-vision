@@ -12,16 +12,18 @@
 *.pdb
 *.ipdb
 *.iobj
-*.exe
-*.dll
-*.lib
-*.exp
 *.tlog
 *.recipe
 *.log
 *.res
+*.exp
 
-# NuGet
+# Compiled executables and libraries (build output only)
+# Note: IrisCore/rsc/ binaries are intentionally tracked — see below
+/Iris/x64/
+/IrisCore/x64/
+
+# NuGet packages (restored automatically via nuget restore)
 packages/
 *.nupkg
 
@@ -31,10 +33,19 @@ Temp/
 *.bak
 *.tmp
 
-# Models and big files
+# Models and big binary resources — too large for git, supply manually
 *.onnx
-*.sys
-*.cer
+
+# Resource binaries — supplied manually on each machine
+# (DLLs are too large for git; Driver.sys/mapper.exe must not be public)
+IrisCore/rsc/*.dll
+IrisCore/rsc/Driver.sys
+IrisCore/rsc/mapper.exe
+Driver/rsc/
+Loader/
+
+# Claude
+.claude/
 
 # Claude
 .claude/
