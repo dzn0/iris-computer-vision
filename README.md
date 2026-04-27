@@ -19,7 +19,7 @@
 
 ---
 
-Iris uses a YOLOv8 model to detect players in real time and moves your mouse toward the closest target. Everything runs inside a single terminal window with a clean purple UI — no overlays, no second windows.
+Iris uses a YOLO26s model to detect players in real time and moves your mouse toward the closest target. Everything runs inside a single terminal window with a clean purple UI — no overlays, no second windows.
 
 ## Features
 
