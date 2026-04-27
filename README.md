@@ -23,7 +23,7 @@ Iris uses a YOLOv8 model to detect players in real time and moves your mouse tow
 
 ## Features
 
-- **YOLOv8 detection** via ONNX Runtime with DirectML (GPU acceleration on any DirectX 11 card)
+- **YOLO26s detection** via ONNX Runtime with DirectML (GPU acceleration on any DirectX 11 card)
 - **DXGI screen capture** — low-latency, no performance impact on the game
 - **Kernel-mode mouse driver** — movement bypasses Win32 entirely
 - **Token-gated** — requires a valid key to launch
