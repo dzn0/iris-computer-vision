@@ -36,15 +36,21 @@ When Iris launches, an interactive screen lets you adjust all settings with arro
 
 | Setting | Default | Description |
 |---------|---------|-------------|
-| Confidence Threshold | `0.75` | Minimum detection confidence |
-| Head Priority | `0.50` | How much to prefer head over body |
+| Confidence Threshold | `0.65` | Minimum detection confidence to track |
+| Priority | `Head` | Target preference: Body / Head / Body+Head |
+| ROI Size | `960` | Capture region size in pixels (centered on screen) |
+| Show Boxes | `Off` | Overlay detection boxes on screen |
+| Autofire | `On` | Automatically shoot when on target |
+| Autofire Initial Delay | `0.2s` | Delay before the first shot |
+| Autofire Delay | `0.2s` | Delay between consecutive shots |
+| Overshooting | `70` | Mouse movement strength factor |
 | FOV Horizontal | `103°` | Your in-game horizontal FOV |
 | FOV Vertical | `70°` | Your in-game vertical FOV |
 | Sensitivity | `1.0` | Your in-game sensitivity |
 | DPI | `800` | Your mouse DPI |
-| Smoothing | `0.85` | Movement smoothness (0 = instant) |
-| Deadzone | `3.0°` | Minimum angle before moving |
-| Max Speed | `500 px/s` | Movement speed cap |
+| Smoothing | `Off` | Movement damping (0 = instant) |
+| Deadzone | `Off` | Minimum angle before movement is applied |
+| Max Speed | `1600 px/s` | Maximum movement speed cap |
 
 ## Requirements
 
