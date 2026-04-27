@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.ML.OnnxRuntime.DirectML.1.24.4\build\native\Microsoft.ML.OnnxRuntime.DirectML.props" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntime.DirectML.1.24.4\build\native\Microsoft.ML.OnnxRuntime.DirectML.props')" />
+  <Import Project="..\packages\Microsoft.AI.DirectML.1.15.4\build\Microsoft.AI.DirectML.props" Condition="Exists('..\packages\Microsoft.AI.DirectML.1.15.4\build\Microsoft.AI.DirectML.props')" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="hdr\AntiDebug.h" />
+    <ClInclude Include="hdr\Config.h" />
+    <ClInclude Include="hdr\ObfStr.h" />
+    <ClInclude Include="hdr\DXGICaptureOptimized.h" />
+    <ClInclude Include="hdr\MouseController.h" />
+    <ClInclude Include="hdr\YOLOInference.h" />
+    <ClInclude Include="hdr\resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\DXGICaptureOptimized.cpp" />
+    <ClCompile Include="src\MouseController.cpp" />
+    <ClCompile Include="src\YOLOInference.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="rsc\IrisCore.rc" />
+    <None Include="packages.config" />
+    <None Include="rsc\best.onnx" />
+    <None Include="rsc\Driver.sys" />
+    <None Include="rsc\mapper.exe" />
+    <None Include="rsc\onnxruntime.dll" />
+    <None Include="rsc\onnxruntime_providers_shared.dll" />
+    <None Include="rsc\DirectML.dll" />
+    <None Include="rsc\opencv_core4.dll" />
+    <None Include="rsc\opencv_imgproc4.dll" />
+    <None Include="rsc\opencv_highgui4.dll" />
+    <None Include="rsc\opencv_imgcodecs4.dll" />
+    <None Include="rsc\opencv_calib3d4.dll" />
+    <None Include="rsc\opencv_dnn4.dll" />
+    <None Include="rsc\opencv_features2d4.dll" />
+    <None Include="rsc\opencv_flann4.dll" />
+    <None Include="rsc\opencv_ml4.dll" />
+    <None Include="rsc\opencv_objdetect4.dll" />
+    <None Include="rsc\opencv_photo4.dll" />
+    <None Include="rsc\opencv_stitching4.dll" />
+    <None Include="rsc\opencv_video4.dll" />
+    <None Include="rsc\opencv_videoio4.dll" />
+    <None Include="rsc\abseil_dll.dll" />
+    <None Include="rsc\avcodec-62.dll" />
+    <None Include="rsc\avdevice-62.dll" />
+    <None Include="rsc\avfilter-11.dll" />
+    <None Include="rsc\avformat-62.dll" />
+    <None Include="rsc\avutil-60.dll" />
+    <None Include="rsc\date-tz.dll" />
+    <None Include="rsc\jpeg62.dll" />
+    <None Include="rsc\libcurl.dll" />
+    <None Include="rsc\liblzma.dll" />
+    <None Include="rsc\libpng16.dll" />
+    <None Include="rsc\libprotobuf-lite.dll" />
+    <None Include="rsc\libprotobuf.dll" />
+    <None Include="rsc\libprotoc.dll" />
+    <None Include="rsc\libsharpyuv.dll" />
+    <None Include="rsc\libwebp.dll" />
+    <None Include="rsc\libwebpdecoder.dll" />
+    <None Include="rsc\libwebpdemux.dll" />
+    <None Include="rsc\libwebpmux.dll" />
+    <None Include="rsc\pdcurses.dll" />
+    <None Include="rsc\pkgconf-7.dll" />
+    <None Include="rsc\re2.dll" />
+    <None Include="rsc\swresample-6.dll" />
+    <None Include="rsc\swscale-9.dll" />
+    <None Include="rsc\tiff.dll" />
+    <None Include="rsc\turbojpeg.dll" />
+    <None Include="rsc\zlib1.dll" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e27104b7-3608-45b9-9196-905858044f31}</ProjectGuid>
+    <RootNamespace>IrisCore</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <VcpkgEnabled>true</VcpkgEnabled>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\x64\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)hdr;$(ProjectDir)..\packages\Microsoft.ML.OnnxRuntime.DirectML.1.24.4\build\native\include;C:/vcpkg/installed/x64-windows/include/opencv4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\packages\Microsoft.ML.OnnxRuntime.DirectML.1.24.4\runtimes\win-x64\native;C:/vcpkg/installed/x64-windows/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;$(ProjectDir)..\packages\Microsoft.ML.OnnxRuntime.DirectML.1.24.4\runtimes\win-x64\native\onnxruntime.lib;opencv_core4.lib;opencv_imgproc4.lib;delayimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>onnxruntime.dll;opencv_core4.dll;opencv_imgproc4.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <UACExecutionLevel>requireAdministrator</UACExecutionLevel>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y /I "$(ProjectDir)rsc\*" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)hdr;$(ProjectDir)..\packages\Microsoft.ML.OnnxRuntime.DirectML.1.24.4\build\native\include;C:/vcpkg/installed/x64-windows/include/opencv4;C:/vcpkg/installed/x64-windows/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\packages\Microsoft.ML.OnnxRuntime.DirectML.1.24.4\runtimes\win-x64\native;C:/vcpkg/installed/x64-windows/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;$(ProjectDir)..\packages\Microsoft.ML.OnnxRuntime.DirectML.1.24.4\runtimes\win-x64\native\onnxruntime.lib;opencv_core4.lib;opencv_imgproc4.lib;delayimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>onnxruntime.dll;opencv_core4.dll;opencv_imgproc4.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <UACExecutionLevel>requireAdministrator</UACExecutionLevel>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y /I "$(ProjectDir)rsc\*" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\Microsoft.AI.DirectML.1.15.4\build\Microsoft.AI.DirectML.targets" Condition="Exists('..\packages\Microsoft.AI.DirectML.1.15.4\build\Microsoft.AI.DirectML.targets')" />
+    <Import Project="..\packages\Microsoft.ML.OnnxRuntime.DirectML.1.24.4\build\native\Microsoft.ML.OnnxRuntime.DirectML.targets" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntime.DirectML.1.24.4\build\native\Microsoft.ML.OnnxRuntime.DirectML.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.AI.DirectML.1.15.4\build\Microsoft.AI.DirectML.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.AI.DirectML.1.15.4\build\Microsoft.AI.DirectML.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.AI.DirectML.1.15.4\build\Microsoft.AI.DirectML.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.AI.DirectML.1.15.4\build\Microsoft.AI.DirectML.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntime.DirectML.1.24.4\build\native\Microsoft.ML.OnnxRuntime.DirectML.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntime.DirectML.1.24.4\build\native\Microsoft.ML.OnnxRuntime.DirectML.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntime.DirectML.1.24.4\build\native\Microsoft.ML.OnnxRuntime.DirectML.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntime.DirectML.1.24.4\build\native\Microsoft.ML.OnnxRuntime.DirectML.targets'))" />
+  </Target>
+</Project>

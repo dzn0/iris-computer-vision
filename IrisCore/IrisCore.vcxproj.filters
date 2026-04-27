@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="hdr">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="rsc">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rsc\deps">
+      <UniqueIdentifier>{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="hdr\AntiDebug.h">
+      <Filter>hdr</Filter>
+    </ClInclude>
+    <ClInclude Include="hdr\ObfStr.h">
+      <Filter>hdr</Filter>
+    </ClInclude>
+    <ClInclude Include="hdr\DXGICaptureOptimized.h">
+      <Filter>hdr</Filter>
+    </ClInclude>
+    <ClInclude Include="hdr\MouseController.h">
+      <Filter>hdr</Filter>
+    </ClInclude>
+    <ClInclude Include="hdr\YOLOInference.h">
+      <Filter>hdr</Filter>
+    </ClInclude>
+    <ClInclude Include="hdr\resource.h">
+      <Filter>hdr</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="rsc\IrisCore.rc">
+      <Filter>rsc</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DXGICaptureOptimized.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MouseController.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\YOLOInference.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <Filter>rsc</Filter>
+    </None>
+    <None Include="rsc\best.onnx">
+      <Filter>rsc</Filter>
+    </None>
+    <None Include="rsc\Driver.sys">
+      <Filter>rsc</Filter>
+    </None>
+    <None Include="rsc\mapper.exe">
+      <Filter>rsc</Filter>
+    </None>
+    <None Include="rsc\onnxruntime.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\onnxruntime_providers_shared.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\DirectML.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\opencv_core4.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\opencv_imgproc4.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\opencv_highgui4.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\opencv_imgcodecs4.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\opencv_calib3d4.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\opencv_dnn4.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\opencv_features2d4.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\opencv_flann4.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\opencv_ml4.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\opencv_objdetect4.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\opencv_photo4.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\opencv_stitching4.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\opencv_video4.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\opencv_videoio4.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\abseil_dll.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\avcodec-62.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\avdevice-62.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\avfilter-11.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\avformat-62.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\avutil-60.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\date-tz.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\jpeg62.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\libcurl.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\liblzma.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\libpng16.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\libprotobuf-lite.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\libprotobuf.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\libprotoc.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\libsharpyuv.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\libwebp.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\libwebpdecoder.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\libwebpdemux.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\libwebpmux.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\pdcurses.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\pkgconf-7.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\re2.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\swresample-6.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\swscale-9.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\tiff.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\turbojpeg.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="rsc\zlib1.dll">
+      <Filter>rsc\deps</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\native\onnxruntime.dll">
+      <Filter>rsc</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\native\onnxruntime_providers_shared.dll">
+      <Filter>rsc</Filter>
+    </None>
+  </ItemGroup>
+</Project>

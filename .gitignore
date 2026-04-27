@@ -1,0 +1,40 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.vcxproj.user
+
+# Build outputs
+[Xx]64/
+[Dd]ebug/
+[Rr]elease/
+*.obj
+*.pdb
+*.ipdb
+*.iobj
+*.exe
+*.dll
+*.lib
+*.exp
+*.tlog
+*.recipe
+*.log
+*.res
+
+# NuGet
+packages/
+*.nupkg
+
+# Backup and temp
+Backup/
+Temp/
+*.bak
+*.tmp
+
+# Models and big files
+*.onnx
+*.sys
+*.cer
+
+# Claude
+.claude/

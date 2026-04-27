@@ -1,0 +1,52 @@
+#pragma once
+
+// Core resources
+#define IDR_BEST_ONNX    101
+#define IDR_DRIVER_SYS   102
+#define IDR_MAPPER_EXE   103
+
+// Embedded DLLs (extracted to C:\Windows\Temp\IrisCore\ at startup)
+#define IDR_DLL_DIRECTML                201
+#define IDR_DLL_ABSEIL                  202
+#define IDR_DLL_AVCODEC                 203
+#define IDR_DLL_AVDEVICE                204
+#define IDR_DLL_AVFILTER                205
+#define IDR_DLL_AVFORMAT                206
+#define IDR_DLL_AVUTIL                  207
+#define IDR_DLL_DATE_TZ                 208
+#define IDR_DLL_JPEG62                  209
+#define IDR_DLL_LIBCURL                 210
+#define IDR_DLL_LIBLZMA                 211
+#define IDR_DLL_LIBPNG16                212
+#define IDR_DLL_LIBPROTOBUF_LITE        213
+#define IDR_DLL_LIBPROTOBUF             214
+#define IDR_DLL_LIBPROTOC               215
+#define IDR_DLL_LIBSHARPYUV             216
+#define IDR_DLL_LIBWEBP                 217
+#define IDR_DLL_LIBWEBPDECODER          218
+#define IDR_DLL_LIBWEBPDEMUX            219
+#define IDR_DLL_LIBWEBPMUX              220
+#define IDR_DLL_ONNXRUNTIME             221
+#define IDR_DLL_ONNXRUNTIME_PROVIDERS   222
+#define IDR_DLL_OPENCV_CALIB3D          223
+#define IDR_DLL_OPENCV_CORE             224
+#define IDR_DLL_OPENCV_DNN              225
+#define IDR_DLL_OPENCV_FEATURES2D       226
+#define IDR_DLL_OPENCV_FLANN            227
+#define IDR_DLL_OPENCV_HIGHGUI          228
+#define IDR_DLL_OPENCV_IMGCODECS        229
+#define IDR_DLL_OPENCV_IMGPROC          230
+#define IDR_DLL_OPENCV_ML               231
+#define IDR_DLL_OPENCV_OBJDETECT        232
+#define IDR_DLL_OPENCV_PHOTO            233
+#define IDR_DLL_OPENCV_STITCHING        234
+#define IDR_DLL_OPENCV_VIDEO            235
+#define IDR_DLL_OPENCV_VIDEOIO          236
+#define IDR_DLL_PDCURSES                237
+#define IDR_DLL_PKGCONF                 238
+#define IDR_DLL_RE2                     239
+#define IDR_DLL_SWRESAMPLE              240
+#define IDR_DLL_SWSCALE                 241
+#define IDR_DLL_TIFF                    242
+#define IDR_DLL_TURBOJPEG               243
+#define IDR_DLL_ZLIB1                   244
