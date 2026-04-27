@@ -97,6 +97,56 @@ On every launch, before the detection starts, an interactive screen lets you tun
 
 ---
 
+## Building from Source
+
+> This is only needed if you want to modify the code. To just use Iris, grab the exe from [Releases](https://github.com/dzn0/iris-computer-vision/releases/latest).
+
+### Prerequisites
+
+- **Visual Studio 2022** with the *Desktop development with C++* workload
+- **Windows SDK 10.0** (included with VS installer)
+- Git (to clone the repo)
+
+### Steps
+
+**1. Clone the repository**
+```bat
+git clone https://github.com/dzn0/iris-computer-vision.git
+cd iris-computer-vision
+```
+
+**2. Add private files**
+
+Two files cannot be distributed publicly and must be sourced separately:
+
+| File | Destination |
+|------|-------------|
+| `Driver.sys` | `IrisCore\rsc\Driver.sys` |
+| `mapper.exe` | `IrisCore\rsc\mapper.exe` |
+
+**3. Run the build script**
+```bat
+build.bat
+```
+
+`build.bat` will automatically:
+- Download `deps.zip` (~69 MB) from GitHub Releases if `IrisCore\rsc\` is empty — contains all 44 runtime DLLs and the ONNX model
+- Restore NuGet packages (ONNX Runtime + DirectML)
+- Compile `Iris` and `IrisCore` in Release x64
+
+Output: `x64\Iris.exe` and `x64\IrisCore.exe`
+
+### Project structure
+
+```
+Iris/          # Launcher — token auth, system check, downloader
+IrisCore/      # Engine — screen capture, YOLO inference, mouse driver
+Driver/        # Kernel-mode mouse driver source
+build.bat      # One-shot build script
+```
+
+---
+
 ## Requirements
 
 - Windows 10 / 11 (64-bit)
