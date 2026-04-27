@@ -30,9 +30,52 @@ Iris uses a YOLO26s model to detect players in real time and moves your mouse to
 - **Auto-updating** — always downloads the latest version at startup, no manual updates needed
 - **Interactive config** — tune every aiming parameter from the terminal before each session
 
+## Getting Started
+
+### 1. Prepare Windows
+
+Iris requires a few system settings before it can run. Iris checks these automatically and tells you what to fix, but it's faster to do them beforehand.
+
+**Disable Core Isolation (Memory Integrity)**
+> Windows Security → Device Security → Core Isolation → Memory Integrity → Off
+
+**Disable Windows Defender real-time protection**
+> Windows Security → Virus & threat protection → Manage settings → Real-time protection → Off
+
+Reboot after making these changes.
+
+### 2. Get a token
+
+Join the Discord (`@d.zn.`) and request access. You'll receive a token string to paste into Iris on first launch.
+
+### 3. Run Iris
+
+Download `Iris.exe` from the [latest release](https://github.com/dzn0/iris-computer-vision/releases/latest) and run it as **Administrator**.
+
+Iris will:
+1. Ask for your token and validate it
+2. Check that all system requirements are met
+3. Download the latest `IrisCore.exe` automatically
+4. Show the configuration screen — adjust settings with arrow keys, press **Enter** to start
+
+### 4. Launch Valorant
+
+After pressing Enter on the config screen, Iris is active. Open Valorant normally.
+
+> ⚠️ Always start Iris **before** opening Valorant.
+
+### Controls
+
+| Key | Action |
+|-----|--------|
+| `F1` | Toggle aim assist on / off |
+| `Ctrl+C` | Stop Iris |
+
+---
+
 ## Configuration
 
-When Iris launches, an interactive screen lets you adjust all settings with arrow keys. Changes are saved automatically for next time.
+On every launch, before the detection starts, an interactive screen lets you tune all settings. Use **↑ ↓** to navigate rows, **← →** to adjust values. Changes are saved automatically for next time.
 
 | Setting | Default | Description |
 |---------|---------|-------------|
@@ -52,6 +95,8 @@ When Iris launches, an interactive screen lets you adjust all settings with arro
 | Deadzone | `Off` | Minimum angle before movement is applied |
 | Max Speed | `1600 px/s` | Maximum movement speed cap |
 
+---
+
 ## Requirements
 
 - Windows 10 / 11 (64-bit)
@@ -60,11 +105,11 @@ When Iris launches, an interactive screen lets you adjust all settings with arro
 - Windows Defender real-time protection **disabled**
 - Valorant / Vanguard **not running** at launch
 
-Iris checks all of these automatically and tells you exactly what to fix before proceeding.
+---
 
-## Getting Access
+## Credits
 
-Join our Discord and grab a token. Paste it into Iris on first launch — that's it.
+- **[TheCruZ/kdmapper](https://github.com/TheCruZ/kdmapper)** — kernel driver mapper used to load the mouse driver without a signed certificate
 
 ---
 
